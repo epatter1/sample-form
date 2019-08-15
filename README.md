@@ -1,6 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+
 ## Available Scripts
+
+### After cloning:
+Run an `npm install`. If you don't have the v4 version of material ui core, run:
+### `npm install @material-ui/core`
 
 In the project directory, you can run:
 
