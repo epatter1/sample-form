@@ -13,13 +13,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Signup = function Signup() {
   var signup = function signup() {
-    alert("User Created! \nName: ".concat(inputs.firstName, " ").concat(inputs.lastName, "\nEmail: ").concat(inputs.email));
+    alert("User Created! \nName: ".concat(inputs.fullName, " ").concat("\nEmail: ").concat(inputs.email));
   };
 
   var _useSignUpForm = (0, _CustomHooks.default)({
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
+    phonenumber: '',
+    zipcode: '',
+    yes: '',
+    no: '',
     password1: '',
     password2: ''
   }, signup),
@@ -47,9 +50,9 @@ var Signup = function Signup() {
   }, _react.default.createElement("input", {
     className: "input",
     type: "text",
-    name: "firstName",
+    name: "fullName",
     onChange: handleInputChange,
-    value: inputs.firstName,
+    value: inputs.fullName,
     required: true
   }))), _react.default.createElement("div", {
     className: "field"
@@ -60,9 +63,6 @@ var Signup = function Signup() {
   }, _react.default.createElement("input", {
     className: "input",
     type: "text",
-    name: "lastName",
-    onChange: handleInputChange,
-    value: inputs.lastName,
     required: true
   }))), _react.default.createElement("div", {
     className: "field"

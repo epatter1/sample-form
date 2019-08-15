@@ -36,13 +36,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const names = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
+  "Become twice as strong when both of your fingers are stuck" ,
+  "Crawl twice as fast as you can run?",
+  "Have everything you draw become real but be permanently terrible at drawing",
+  "Be able to fly but only as fast as you can walk",
+  "Eat a sandwich made from 4 ingredients in your fridge chosen at random",
+  "Eat a sandwich made by a group of your friends from 4 ingredients in your fridge",
+  "Live without the internet",
+  "Live without AC and heating",
+  "Be able to teleport anywhere",
+  "Able to read minds"
 ];
 
 const Signup = () => {
@@ -55,7 +58,7 @@ const Signup = () => {
 
   const signup = () => {
     alert(`User Created! 
-Name: ${inputs.firstName} ${inputs.lastName}
+Name: ${inputs.fullName} ${inputs.lastName}
 Email: ${inputs.email}`);
   };
   const { inputs, setInputs, handleInputChange, handleSubmit } = useSignUpForm(
@@ -63,6 +66,8 @@ Email: ${inputs.email}`);
       fullName: "",
       email: "",
       phonenumber: "",
+      city: "",
+      state: "",
       zipcode: "",
       yes: "",
       no: "",
@@ -120,6 +125,34 @@ Email: ${inputs.email}`);
               </div>
 
               <div className="field">
+              <label className="label has-text-centered">City</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  name="phonenumber"
+                  onChange={handleInputChange}
+                  value={inputs.lastName}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="field">
+            <label className="label has-text-centered">State</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                name="phonenumber"
+                onChange={handleInputChange}
+                value={inputs.lastName}
+                required
+              />
+            </div>
+          </div>
+
+              <div className="field">
                 <label className="label has-text-centered">Zip Code</label>
                 <div className="control">
                   <input
@@ -159,7 +192,7 @@ Email: ${inputs.email}`);
               </div>
               <div className="form-check">
               <FormControl className={classes.formControl}>
-                <label>Favorite days of the week: </label>
+                <label>Would You Rather: </label>
                 <InputLabel htmlFor="select-multiple-checkbox"></InputLabel>
                 <Select
                   multiple
